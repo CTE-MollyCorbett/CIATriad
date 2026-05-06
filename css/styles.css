@@ -1,0 +1,320 @@
+/* -------------------------------------------- REMOVE DEFAULT STYLING -------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------------------------------------- VARIABLES ------------------------------------------------- */
+/* Gold: #F5A800 */
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+:root {
+    /* Colors */
+    --dark: #003366;
+    --prime-blue: #00539A;
+    --prime-green: #008762;
+    --gold: #FFD66B;
+    --white: #FFFFFF;
+    --pastel-blue: #93A4CF;
+    --lt-blue: #a0eeff;
+    --pastel-green: #92C3B2;
+    /* Typography */
+    --text: #1A2B45;
+    --main-font: 'EB Garamond', Garamond, serif;
+    --bold-font: 'Oswald', Arial, sans-serif;
+    --reg-font: 'Elms Sans' Arial, sans-serif;
+    /* Spacing Scale */
+    --small: 0.75rem;
+    --medium: 1.5rem;
+    --large: 3rem;
+    /* Borders */
+    --radius: 8px;
+    --border: 2px solid var(--gold);
+}
+/* -------------------------------------------------- BODY -------------------------------------------------- */
+body {
+    font-family: var(--main-font);
+    color: var(--text);
+    line-height: 1.6;
+}
+/* -------------------------------------------------- HEADER -------------------------------------------------- */
+header {
+    background-color: var(--dark);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.25);
+}
+/* -------------------------------------------------- NAVIGATION -------------------------------------------------- */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--main-font);
+}
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links a {
+    color: lightgray;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: var(--gold);
+}
+/* -------------------------------------------------- HERO IMAGE -------------------------------------------------- */
+#hero {
+    background-image: url('../images/cia2.png');
+    min-height: 50%;
+    max-height: 70%;
+    background-size: cover;
+    background-position: center;
+    font-family: var(--bold-font);
+    overflow: hidden;
+}
+#hero::before {
+    margin-top: 3.6rem;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: #00336688;
+}
+.hero-content {
+    position: relative;
+    text-align: left;
+    color: var(--white);
+    z-index: 1;
+    padding-top: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.hero-content h1 {
+     font-size: 3.5rem;
+     margin-bottom: 0.5rem;
+     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.hero-content p {
+     color: var(--lt-blue);
+     margin-bottom: 1.5rem;
+     max-width: 39%;
+}
+.sub-head {
+    background-color: rgba(50, 140, 200, 0.47);
+    border: solid rgb(50, 140, 200) 1px;
+    border-radius: 20px;
+}
+.hero-content .sub-head {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    width: max-content;
+}
+/* -------------------------------------------------- BUTTONS -------------------------------------------------- */
+.btn {
+     display: inline-block;
+     padding: 0.8rem 2rem;
+     border-radius: 4px;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 1.1rem;
+     transition: background-color 0.5s;
+}
+.btn1 {
+    background-color: var(--lt-blue);
+    color: var(--prime-blue);
+}
+.btn2 {
+    background-color: transparent;
+    color: var(--white);
+    border: solid 1px var(--white);
+}
+.btn:hover {
+     background-color: var(--pastel-green);
+}
+/* -------------------------------------------------- MAIN -------------------------------------------------- */
+main {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 2rem;
+     font-family: var(--reg-font);
+}
+main p {
+     margin-bottom: 1rem;
+}
+main #about p {
+     max-width: 800px;
+}
+/* -------------------------------------------------- SECTIONS -------------------------------------------------- */
+section {
+     padding: 4rem 0;
+     border-bottom: 2px solid var(--pastel-blue);
+}
+section:last-child {
+     border-bottom: none;
+}
+.section-title {
+     font-size: 2rem;
+     color: var(--prime-blue);
+     margin-bottom: 0.5rem;
+     padding-bottom: 0.5rem;
+     border-left: 5px solid var(--prime-green);
+     padding-left: 1rem;
+}
+.section-subtitle {
+     color: #666;
+     margin-bottom: 2rem;
+     font-style: italic;
+}
+/* -------------------------------------------------- COURSES -------------------------------------------------- */
+.courses-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     margin-top: 1.5rem;
+}
+.course-card {
+     flex: 1 1 220px;
+     background-color: var(--white);
+     border: 2px solid var(--pastel-blue);
+     border-top: 5px solid var(--prime-green);
+     border-radius: 6px;
+     padding: 1.5rem;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.course-card h3 {
+     color: var(--prime-blue);
+     margin-bottom: 0.75rem;
+}
+.course-card ul {
+     padding-left: 1.2rem;
+}
+.course-card li {
+     margin-bottom: 0.4rem;
+     font-size: 0.95rem;
+}
+/* -------------------------------------------------- SKILLS -------------------------------------------------- */
+.skills-table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: var(--small);
+}
+.skills-table th, .skills-table td {
+     padding: 0.6rem 1rem;
+     border: 1px solid #ddd;
+     text-align: left;
+}
+.skills-table th {
+     background-color: var(--dark);
+     color: var(--gold);
+     font-weight: 600;
+}
+.skills-table tr:nth-child(even) {
+     background-color: var(--pastel-blue);
+     color: var(--white);
+}
+.skills-table tr:hover {
+     background-color: var(--prime-blue);
+     color: var(--white);
+}
+/* -------------------------------------------------- PROJECTS -------------------------------------------------- */
+.projects-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     margin-top: 1.5rem;
+}
+.project-card {
+     flex: 1 1 260px;
+     border: 2px double var(--dark);
+     border-radius: 6px;
+     overflow: hidden; /* Will also fix the hero image cover */
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+.project-card-header {
+     background-color: var(--dark);
+     padding: 1rem 1.2rem;
+     color: var(--gold);
+}
+.project-card-body {
+     padding: 1rem 1.2rem;
+}
+.project-card-body p {
+     margin-bottom: 1rem;
+     font-size: 0.95rem;
+}
+.project-link {
+     display: inline-block;
+     background-color: var(--dark);
+     color: var(--white);
+     padding: 0.4rem 1rem;
+     text-decoration: none;
+     font-size: 0.9rem;
+     border-radius: var(--radius);
+     transition: all 0.5s;
+}
+.project-link:hover {
+     background-color: var(--prime-blue);
+     color: var(--gold);
+}
+/* -------------------------------------------------- FOOTER -------------------------------------------------- */
+footer {
+     background-color: var(--dark);
+     color: var(--white);
+     padding: 2.5rem 2rem 1rem;
+}
+.footer-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     gap: 2rem;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+.footer-col {
+     min-width: 140px;
+}
+.footer-col h4 {
+     color: var(--gold);
+     margin-bottom: 1rem;
+     font-size: 1.2rem;
+     border-bottom: 1px solid var(--pastel-blue);
+     padding-bottom: 0.5rem;
+}
+.footer-nav-links {
+     list-style: none;
+     padding: 0;
+}
+.footer-nav-links li {
+     margin-bottom: 0.5rem;
+}
+.footer-nav-links a {
+     color: var(--white);
+     text-decoration: none;
+     transition: color 0.5s;
+}
+.footer-nav-links a:hover {
+     color: var(--gold);
+}
+.footer-bottom {
+     text-align: center;
+     margin-top: 2rem;
+     padding-top: 1rem;
+     border-top: 1px solid var(--pastel-blue);
+     font-size: 0.85rem;
+     color: var(--pastel-blue);
+}
