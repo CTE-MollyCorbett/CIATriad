@@ -8,6 +8,7 @@
 </head>
 <body>
   <header>
+    <!-------------------------------- NAVIGATION -------------------------------->
     <nav class="main-nav">
         <p class="nav-logo">CyberSecurity Fundamentals</p>
         <ul class="nav-links">
@@ -21,18 +22,59 @@
         </ul>
     </nav>
   </header>
+  <!-------------------------------- HERO IMAGE -------------------------------->
   <section id="hero">
     <div class="hero-content">
         <p class="sub-head">Computer &amp; Information Science - Seaway Tech</p>
         <h1>Understanding the CIA Triad &amp; Authentication</h1>
-        <p class="intro">Explore the core principles every cybersecurity professional must
-        know — Confidentiality, Integrity, Availability, and how we prove who
-        we are in a digital world.</p>
+        <p class="intro">Explore the core principles every cybersecurity professional must know — Confidentiality, Integrity, Availability, and how we prove who we are in a digital world.</p>
         <a href="#triad" class="btn btn1">Explore the Triad</a>
         <a href="#aaa" class="btn btn2">Learn Authentication</a>
     </div>
   </section>
   <main>
+    <!-------------------------------- CIA TRIAD -------------------------------->
+    <section id="triad">
+      <p class="section-subtitle">Core Framework</p>
+      <h2 class="section-title">The CIA Framework</h2>
+      <p>Data is a valuable asset. The primary goal of cybersecurity is to maintain three critical properties - collectively known as the <b>CIA Triad</b> — for all data, all the time.</p>
+      <div class="triad-grid">
+        <div class="triad-card">
+          <h3>Confidentiality</h3>
+          <h4>Data is not revealed</h4>
+          <p>Protection against unauthorized access. Only those with proper permission should ever be able to read or view the data.</p>
+          <p>Think of it as a locked diary — only the owner (or those granted access) can read it.</p>
+          <div class="highlight">
+            <h4>REAL-WORLD BREACH</h4>
+            <p>Edward Snowden's 2013 leak of classified NSA government data is a landmark example of a Confidentiality breach.</p>
+          </div>
+        </div>
+        <div class="triad-card">
+          <h3>Integrity</h3>
+          <h4>Data is intact - not modified or corrupted</h4>
+          <p>Protection against unauthorized modification. Data must remain accurate and trustworthy from the moment it is created until it is accessed.</p>
+          <p>If someone changes your grade in the grade book without permission, that's an Integrity breach.</p>
+          <div class="highlight">
+            <h4>REAL-WORLD BREACH</h4>
+            <p>The Stuxnet worm secretly altered code on Iranian centrifuge machines, causing them to spin too fast and physically break — a classic Integrity attack.</p>
+          </div>
+        </div>
+        <div class="triad-card">
+          <h3>Availability</h3>
+          <h4>Data is accessible to allowed users</h4>
+          <p>Protection against denial of service. Authorized users must be able to access data and systems whenever they legitimately need them.</p>
+          <p>A website that is always down, or an account that stays locked, fails the Availability test.</p>
+          <div class="highlight">
+            <h4>REAL-WORLD BREACH</h4>
+            <p>The Mirai Botnet used 145,000+ infected cameras and devices to flood security journalist Brian Krebs' website with traffic, crashing it for 4 days — a textbook DDoS / Availability breach.</p>
+          </div>
+        </div>
+      </div>
+      <section class="card-footer">
+        <p><b>Security Formula:</b> Protection = Prevention + (Detection + Response). Every cybersecurity technique fits into at least one of these three elements, and every element maps back to the CIA Triad.</p>
+      </section>
+    </section>
+    <!-------------------------------- ABOUT -------------------------------->
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">Get to know the developer behind the code</p>
@@ -43,55 +85,7 @@
         <p></p>
         <p></p>
     </section>
-    <section id="courses">
-      <h2 class="section-title">What I Learned This Year</h2>
-      <p class="section-subtitle">A summary of every unit we covered in CIS</p>
-      <div class="courses-grid">
-        <div class="course-card">
-          <h3>🌐 HTML Fundamentals</h3>
-          <ul>
-            <li>Document structure &amp; boilerplate</li>
-            <li>Semantic elements (header, nav, main, footer)</li>
-            <li>Links, images &amp; alt attributes</li>
-            <li>Tables, forms &amp; input types</li>
-            <li>Hero images with CSS backgrounds</li>
-          </ul>
-        </div>
-        <div class="course-card">
-          <h3>🎨 CSS Styling</h3>
-          <ul>
-            <li>Box Model (margin, border, padding)</li>
-            <li>Flexbox layouts</li>
-            <li>CSS Grid</li>
-            <li>Responsive design &amp; media queries</li>
-            <li>Pseudo-elements &amp; transitions</li>
-          </ul>
-        </div>
-        <div class="course-card">
-          <h3>⚡ Python</h3>
-          <ul>
-            <li>Inputs and Outputs</li>
-            <li>Variables, Data Types, &amp; Operators</li>
-            <li>Functions &amp; Conditionals</li>
-            <li>Branching &amp; Loops</li>
-            <li>Lists &amp; Dictionaries</li>
-            <li>Classes &amp; Modules</li>
-          </ul>
-        </div>
-        <div class="course-card">
-          <h3>🛡️ Cybersecurity</h3>
-          <ul>
-            <li>Data Privacy</li>
-            <li>CIA &amp; Authentication</li>
-            <li>Identifying Security Threats</li>
-            <li>Command Line Interface</li>
-            <li>Social Engineering, OSINT, &amp; Phishing</li>
-            <li>Securing a System</li>
-            <li>IoT Threat Modeling</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-------------------------------- SKILLS -------------------------------->
     <section id="skills">
       <h2 class="section-title">My Skills at a Glance</h2>
       <p class="section-subtitle">Technologies and tools I can use</p>
@@ -150,6 +144,7 @@
         </tbody>
       </table>
     </section>
+    <!-------------------------------- PROJECTS -------------------------------->
     <section id="projects">
       <h2 class="section-title">My Projects</h2>
       <p class="section-subtitle">Websites and applications I built this year</p>
@@ -197,6 +192,7 @@
         </div>
       </div>
     </section>
+    <!-------------------------------- CONTACT -------------------------------->
     <section id="contact">
       <h2 class="section-title">Contact</h2>
       <p class="section-subtitle">Reach out!</p>
@@ -210,6 +206,7 @@
       </p>
     </section>
   </main>
+  <!-------------------------------- FOOTER -------------------------------->
   <footer>
     <div class="footer-container">
       <div class="footer-col">
@@ -253,8 +250,6 @@
     <div class="footer-bottom">
       <p>&copy; 2026 Molly Corbett &mdash; SLL BOCES Computer &amp; Information Science &mdash; Canton, NY</p>
     </div>
-
   </footer>
-
 </body>
 </html>
