@@ -35,6 +35,7 @@ body {
     font-family: var(--main-font);
     color: var(--text);
     line-height: 1.6;
+    background-color: rgba(200, 240, 255, 0.2);
 }
 /* -------------------------------------------------- HEADER -------------------------------------------------- */
 header {
@@ -45,7 +46,7 @@ header {
     z-index: 100;
     box-shadow: 0 2px 8px rgb(0, 0, 0, 0.25);
 }
-/* -------------------------------------------------- NAVIGATION -------------------------------------------------- */
+/* ------------------------------------------------- NAVIGATION ------------------------------------------------- */
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -131,19 +132,27 @@ header {
      text-decoration: none;
      font-weight: bold;
      font-size: 0.8rem;
-     transition: background-color 0.5s;
+     transition: all 0.5s;
 }
 .btn1 {
     background-color: skyblue;
     color: var(--prime-blue);
+    border: 1px solid transparent;
 }
 .btn2 {
     background-color: transparent;
     color: var(--white);
     border: solid 1px var(--white);
 }
-.btn:hover {
-     background-color: var(--pastel-green);
+.btn1:hover {
+     background-color: transparent;
+     border-color: var(--white);
+     color: var(--white);
+}
+.btn2:hover {
+     background-color: skyblue;
+     border-color: transparent;
+     color: var(--prime-blue);
 }
 /* -------------------------------------------------- MAIN -------------------------------------------------- */
 main {
@@ -161,25 +170,29 @@ main #about p {
 /* -------------------------------------------------- SECTIONS -------------------------------------------------- */
 section {
      padding: 4rem 0;
-     border-bottom: 2px solid var(--pastel-blue);
-}
-section:last-child {
-     border-bottom: none;
 }
 .section-title {
      font-size: 2rem;
      color: var(--prime-blue);
      margin-bottom: 0.5rem;
      padding-bottom: 0.5rem;
-     border-left: 5px solid var(--prime-green);
-     padding-left: 1rem;
 }
 .section-subtitle {
-     color: #666;
-     margin-bottom: 2rem;
-     font-style: italic;
+     color: skyblue;
+     font-weight: bold;
+     font-size: 1.2rem;
 }
-/* -------------------------------------------------- COURSES -------------------------------------------------- */
+.card-footer {
+     background-color: #a0eeff33;
+     color: var(--dark);
+     border: var(--lt-blue) solid 1px;
+     border-radius: 6px;
+     margin-top: 1rem;
+     padding: 1rem 2rem;
+     padding-bottom: 0.5rem;
+     border-bottom: solid 1px var(--lt-blue);
+}
+/* ------------------------------------------------- CIA TRIAD ------------------------------------------------- */
 .triad-grid {
      display: flex;
      flex-wrap: wrap;
@@ -202,9 +215,95 @@ section:last-child {
 .triad-card p {
      padding-left: 1.2rem;
 }
-.triad-card li {
+.highlight {
+     background-color: rgba(255, 0, 0, 0.1);
+     border-left: 5px solid red;
+     padding: 0.5rem;
+     padding-left: 1rem;
+     color: brown;
+}
+/* ------------------------------------------------ DATA STATES ------------------------------------------------ */
+.data-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     margin-top: 1.5rem;
+}
+.data-card {
+     flex: 1 1 220px;
+     background-color: var(--white);
+     border: 2px solid var(--pastel-blue);
+     border-top: 5px solid var(--prime-green);
+     border-radius: 6px;
+     padding: 1.5rem;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.data-card h3 {
+     color: var(--prime-blue);
+     margin-bottom: 0.75rem;
+}
+.data-card p {
+     padding-left: 1.2rem;
+}
+.data-card li {
      margin-bottom: 0.4rem;
      font-size: 0.95rem;
+}
+/* -------------------------------------------- AUTHENTICATION (AAA) -------------------------------------------- */
+.aaa-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     margin-top: 1.5rem;
+}
+.aaa-card {
+     flex: 1 1 220px;
+     background-color: var(--white);
+     border: 1px solid var(--lt-blue);
+     border-radius: 6px;
+     padding: 1.5rem;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+     color: var(--text);
+}
+.aaa-card h3 {
+     color: black;
+     font-size: 3.5rem;
+}
+.aaa-card h4 {
+     color: var(--prime-blue);
+     font-size: 2rem;
+}
+.aaa-card p {
+     padding-left: 1.2rem;
+}
+/* -------------------------------------------- AUTHENTICATION (AAA) -------------------------------------------- */
+.passwords-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     margin-top: 1.5rem;
+}
+.passwords-card {
+     flex: 1 1 220px;
+     background-color: var(--white);
+     border: 1px solid var(--lt-blue);
+     border-radius: 6px;
+     padding: 1.5rem;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+     color: var(--text);
+}
+.passwords-card h3 {
+     color: black;
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+.passwords-card h4 {
+     color: var(--prime-blue);
+     font-size: 1rem;
+     margin-bottom: 1rem;
+}
+.passwords-card p {
+     color: #666;
 }
 /* -------------------------------------------------- SKILLS -------------------------------------------------- */
 .skills-table {
