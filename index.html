@@ -163,7 +163,7 @@
     <!-------------------------------- HOW LONG TO BRUTE FORCE PASSWORDS -------------------------------->
     <section id="pass-safety">
       <h2 class="section-title">How Long to Brute Force Your Password?</h2>
-      <p class="section-subtitle">Estimated crack time based on password length and character types used. Red = cracked instantly. Green = extremely safe</p>
+      <p>Estimated crack time based on password length and character types used. Red = cracked instantly. Green = extremely safe</p>
       <table class="pass-safety-table">
         <thead>
           <tr>
@@ -262,94 +262,128 @@
         <p><b>What Hackers Already Know:</b> Capital letters are usually at the start, numbers are usually 1 or 2 at the start or end, women often choose personal names, and men often choose hobbies. Don't be predictable - length and variety are your best defense!</p>
       </section>
     </section>
-    <!-------------------------------- PROJECTS -------------------------------->
-    <section id="projects">
-      <h2 class="section-title">My Projects</h2>
-      <p class="section-subtitle">Websites and applications I built this year</p>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-card-header">
+    <!-------------------------------- PASSWORD HASHING & SALTING -------------------------------->
+    <section id="hashing">
+      <p class="section-subtitle">Password Storage</p>
+      <h2 class="section-title">Password Hashing &amp; Salting</h2>
+      <p>Passwords should never be stored as plain text. The most common safe storage method is <i>hashing</i> - a one-way mathematical transformation.</p>
+      <div class="hashing-grid">
+        <section class="card-top">
+        <p><b>Pa$$word123</p><p>SHA-256 Algorithm</p><p>e55da5df44555ddfe4de33eefd54365...</p><p>Hashes MATCH<br><br>ACCESS GRANTED</p>
+        </section>
+        <div class="hashing-card">
+          <h3>What is Hashing?</h3>
+          <h4>ONE-WAY CONVERSION</h4>
+          <p>A mathematical function converts a password into a fixed-length string called a <i>hash</i>. It is one-way - the original password cannot be recovered from the hash alone. Common hash algorithms: MD5, SHA-256, SHA-512.</p>
+        </div>
+        <div class="hashing-card">
+          <h3>Rainbow Tables</h3>
+          <h4>ATTACK METHOD</h4>
+          <p>A massive precomputed file of hash values for every possible password. Attackers look up a stolen hash to instantly find the matching password - no cracking required.</p>
+        </div>
+        <div class="hashing-card">
+          <h3>Salting</h3>
+          <h4>DEFENSE METHOD</h4>
+          <p>A unique random string (a <i>salt</i>) is added to each password before hashing. Even identical passwords produce different hashes, completely defeating rainbow table lookups.</p>
+        </div>
+        <div class="hashing-card">
+          <h3>Pass-the-Hash</h3>
+          <h4>ADVANCED ATTACK</h4>
+          <p>The attacker steals the hash directly from storage (Windows SAM hive or Linux /etc/shadow) and uses it to authenticate - without ever knowing the original password.</p>
+        </div>
+      </div>
+      <section class="card-footer">
+        <p><b>Where are passwords stored?</b>On <b>Windows:</b> in the SAM registry hive. On <b>Linux:</b> in /etc/shadow (root access only). The older /etc/passwd file is world-readable and not safe for passwords.</p>
+      </section>
+    </section>
+    <!-------------------------------- AUTHENTICATION METHODS -------------------------------->
+    <section id="methods">
+      <p class="section-subtitle">Beyond Passwords</p>
+      <h2 class="section-title">Methods of Authentication</h2>
+      <p>Modern security goes far beyond passwords. Here are the key authentication methods used in real-world systems - and how combining them creates much stronger protection.</p>
+      <div class="methods-grid">
+        <div class="methods-card">
+          <div class="methods-card-header">
             <h3>Smart Cards</h3>
             <h4>SOMETHING YOU HAVE</h4>
           </div>
-          <div class="project-card-body">
-            <p>A multi-page website showcasing tourist attractions across St. Lawrence County,
-               built with pure HTML and CSS. Includes information about Canton, Potsdam,
-               Massena, and the Thousand Islands.</p>
-            <a href="https://yourusername.github.io/tourism-site" class="project-link" target="_blank">View Live Site →</a>
+          <div class="methods-card-body">
+            <p>Cards with an embedded chip automatically recognized by an authenticating device. Proximity readers can detect them in a pocket or purse without physical contact.</p>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-card-header">
+        <div class="methods-card">
+          <div class="methods-card-header">
             <h3>Digital Certificates</h3>
+            <h4>SOMETHING YOU HAVE</h4>
           </div>
-          <div class="project-card-body">
-            <p>A responsive site demonstrating Flexbox and CSS Grid layouts, complete with
-               a hero image, animated navigation, and a mobile-friendly design.</p>
-            <a href="https://yourusername.github.io/css-showcase" class="project-link" target="_blank">View Live Site →</a>
+          <div class="methods-card-body">
+            <p>Servers use certificates to authenticate with browsers (the padlock in you address bar). Issued by trusted third-party Certificate Authorities (CAs).</p>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-card-header">
+        <div class="methods-card">
+          <div class="methods-card-header">
             <h3>Biometrics</h3>
+            <h4>SOMETHING YOU ARE</h4>
           </div>
-          <div class="project-card-body">
-            <p>An interactive calculator built with JavaScript and DOM manipulation.
-               Users can perform basic arithmetic operations with a clean, modern UI.</p>
-            <a href="https://yourusername.github.io/js-calculator" class="project-link" target="_blank">View Live Site →</a>
+          <div class="methods-card-body">
+            <p>Uses measureable physical characteristics: fingerprint, retina scan, voice, or even typing speed. Disney World uses finger biometrics for multi-day pass verification.</p>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-card-header">
+        <div class="methods-card">
+          <div class="methods-card-header">
             <h3>Hardware Tokens (OTP)</h3>
+            <h4>SOMETHING YOU HAVE</h4>
           </div>
-          <div class="project-card-body">
-            <p>An HTML/CSS infographic page summarizing key concepts from The Social Dilemma
-               and The Great Hack documentaries, with data privacy tips.</p>
-            <a href="https://yourusername.github.io/ethics-page" class="project-link" target="_blank">View Live Site →</a>
+          <div class="methods-card-body">
+            <p>A physical device generates a new One-Time Password (OTP) every 60 seconds. Since each OTP is used exactly once, intercepting it is useless to an attacker.</p>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-card-header">
+        <div class="methods-card">
+          <div class="methods-card-header">
             <h3>Two-Factor Auth (2FA)</h3>
+            <h4>KNOW + HAVE</h4>
           </div>
-          <div class="project-card-body">
-            <p>A responsive site demonstrating Flexbox and CSS Grid layouts, complete with
-               a hero image, animated navigation, and a mobile-friendly design.</p>
-            <a href="https://yourusername.github.io/css-showcase" class="project-link" target="_blank">View Live Site →</a>
+          <div class="methods-card-body">
+            <p>Combines two factors - such as a password <i>plus</i> a PIN sent to your phone (like Google 2-Step Verification). One stolen factor alone is useless.</p>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-card-header">
+        <div class="methods-card">
+          <div class="methods-card-header">
             <h3>Multi-Factor Auth (MFA)</h3>
+            <h4>TWO OR MORE FACTORS</h4>
           </div>
-          <div class="project-card-body">
-            <p>An interactive calculator built with JavaScript and DOM manipulation.
-               Users can perform basic arithmetic operations with a clean, modern UI.</p>
-            <a href="https://yourusername.github.io/js-calculator" class="project-link" target="_blank">View Live Site →</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-header">
-            <h3>Single Sign-On</h3>
-          </div>
-          <div class="project-card-body">
-            <p>An HTML/CSS infographic page summarizing key concepts from The Social Dilemma
-               and The Great Hack documentaries, with data privacy tips.</p>
-            <a href="https://yourusername.github.io/ethics-page" class="project-link" target="_blank">View Live Site →</a>
+          <div class="methods-card-body">
+            <p>Uses two or more different authentication factors. The gold standard for account security - combining know, have, and/or are dramatically reduces breach risk.</p>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-card-header">
+        <div class="methods-card">
+          <div class="methods-card-header">
+            <h3>Single Sign-On (SSO)</h3>
+            <h4>ONE LOGIN, MANY RESOURCES</h4>
+          </div>
+          <div class="methods-card-body">
+            <p>One authentication grants access to many servers or services. Used widely in schools and businesses to reduce password fatigue while maintaining security.</p>
+          </div>
+        </div>
+        <div class="methods-card">
+          <div class="methods-card-header">
             <h3>Passphrases</h3>
+            <h4>SOMETHING YOU KNOW</h4>
           </div>
-          <div class="project-card-body">
-            <p>An HTML/CSS infographic page summarizing key concepts from The Social Dilemma
-               and The Great Hack documentaries, with data privacy tips.</p>
-            <a href="https://yourusername.github.io/ethics-page" class="project-link" target="_blank">View Live Site →</a>
+          <div class="methods-card-body">
+            <p>A string of multiple words offers more security than a complex password <i>and</i> is easier to remember. Example: "<i>The 3 little pigs say do not forget the bacon!</i>"</p>
           </div>
         </div>
       </div>
+    </section>
+    <!-------------------------------- AUTHENTICATION METHODS #2 -------------------------------->
+    <section class="methods2">
+      <section class="card-top">
+        <p><b>Pa$$word123</p><p>SHA-256 Algorithm</p><p>e55da5df44555ddfe4de33eefd54365...</p><p>Hashes MATCH<br><br>ACCESS GRANTED</p>
+      </section>
+      <section class="card-footer">
+        <p><b>Useful resources:</b> Check if your hashing</p>
+      </section>
     </section>
     <!-------------------------------- CONTACT FORM -------------------------------->
     <section class="contact">
@@ -380,31 +414,6 @@
         </form>
       </section>
     </section>
-    <!-------------------------------- ABOUT -------------------------------->
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Get to know the developer behind the code</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </section>
-    <!-------------------------------- CONTACT -------------------------------->
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">Reach out!</p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:alexrivera@sllboces.org">alexrivera@sllboces.org</a>
-      </p>
-      <p style="margin-top:0.5rem;">
-        <strong>GitHub:</strong>
-        <a href="https://github.com/alexrivera-dev" target="_blank">github.com/alexrivera-dev</a>
-      </p>
-    </section>
-  </main>
   <!-------------------------------- FOOTER -------------------------------->
   <footer>
     <div class="footer-container">

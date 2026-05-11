@@ -305,7 +305,7 @@ section {
 .passwords-card p {
      color: #666;
 }
-/* -------------------------------------------------- SKILLS -------------------------------------------------- */
+/* ---------------------------------------------- PASSWORD SAFETY ---------------------------------------------- */
 .pass-safety-table {
      background-color: var(--white);
      width: 100%;
@@ -344,44 +344,59 @@ section {
      color: darkgreen;
 }
 /* -------------------------------------------------- PROJECTS -------------------------------------------------- */
-.projects-grid {
+.methods-grid {
      display: flex;
      flex-wrap: wrap;
      gap: 1.5rem;
      margin-top: 1.5rem;
 }
-.project-card {
+.methods-card {
      flex: 1 1 260px;
      border: 2px double var(--dark);
      border-radius: 6px;
      overflow: hidden; /* Will also fix the hero image cover */
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
-.project-card-header {
+.methods-card-header {
      background-color: var(--dark);
      padding: 1rem 1.2rem;
      color: var(--gold);
 }
-.project-card-body {
+.methods-card-body {
      padding: 1rem 1.2rem;
 }
-.project-card-body p {
+.methods-card-body p {
      margin-bottom: 1rem;
      font-size: 0.95rem;
 }
-.project-link {
-     display: inline-block;
-     background-color: var(--dark);
-     color: var(--white);
-     padding: 0.4rem 1rem;
-     text-decoration: none;
-     font-size: 0.9rem;
-     border-radius: var(--radius);
-     transition: all 0.5s;
+/* -------------------------------------------------- HASHING -------------------------------------------------- */
+.hashing-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     margin-top: 1.5rem;
 }
-.project-link:hover {
-     background-color: var(--prime-blue);
-     color: var(--gold);
+.hashing-card {
+     flex: 1 1 220px;
+     background-color: var(--white);
+     border: 1px solid var(--lt-blue);
+     border-radius: 6px;
+     padding: 1.5rem;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+     color: var(--text);
+}
+.hashing-card h3 {
+     color: black;
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+.hashing-card h4 {
+     color: var(--prime-blue);
+     font-size: 1rem;
+     margin-bottom: 1rem;
+}
+.hashing-card p {
+     color: #666;
 }
 /* -------------------------------------------------- CONTACT -------------------------------------------------- */
 .form-card {
