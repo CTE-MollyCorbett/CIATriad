@@ -192,6 +192,10 @@ section {
      padding-bottom: 0.5rem;
      border-bottom: solid 1px var(--lt-blue);
 }
+.blurb {
+     color: steelblue;
+     max-width: 80%;
+}
 /* ------------------------------------------------- CIA TRIAD ------------------------------------------------- */
 .triad-grid {
      display: flex;
@@ -276,7 +280,7 @@ section {
 .aaa-card p {
      padding-left: 1.2rem;
 }
-/* -------------------------------------------- AUTHENTICATION (AAA) -------------------------------------------- */
+/* -------------------------------------------- PASSWORDS -------------------------------------------- */
 .passwords-grid {
      display: flex;
      flex-wrap: wrap;
@@ -343,7 +347,7 @@ section {
 .pass-safety-table .green {
      color: darkgreen;
 }
-/* -------------------------------------------------- PROJECTS -------------------------------------------------- */
+/* ------------------------------------------- AUTHENTICATION METHODS ------------------------------------------- */
 .methods-grid {
      display: flex;
      flex-wrap: wrap;
@@ -352,13 +356,13 @@ section {
 }
 .methods-card {
      flex: 1 1 260px;
-     border: 2px double var(--dark);
+     border: 2px double #006540;
      border-radius: 6px;
      overflow: hidden; /* Will also fix the hero image cover */
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 .methods-card-header {
-     background-color: var(--dark);
+     background-color: #006540;
      padding: 1rem 1.2rem;
      color: var(--gold);
 }
@@ -368,6 +372,33 @@ section {
 .methods-card-body p {
      margin-bottom: 1rem;
      font-size: 0.95rem;
+}
+/* ------------------------------------------ AUTHENTICATION METHODS 2 ------------------------------------------ */
+.methods-card2 {
+     background-color: var(--dark);
+     border: var(--lt-blue) 1px solid;
+     border-radius: 10px;
+     padding: 1.5rem;
+}
+.methods-card2-title {
+     display: inline-block;
+     color: var(--gold);
+     margin-bottom: 2rem;
+}
+.methods-card2-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+}
+.methods-card2-subtitle {
+     color: var(--lt-blue);
+}
+.methods-card2-content {
+     color: lightgray;
+}
+.methods-card2-card {
+     padding: 0.5rem 1rem;
+     margin: 0 1.5rem;
+     color: var(--white);
 }
 /* -------------------------------------------------- HASHING -------------------------------------------------- */
 .hashing-grid {
@@ -398,41 +429,96 @@ section {
 .hashing-card p {
      color: #666;
 }
+.card-top {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     justify-items: center;
+     align-items: center;
+     background-color: var(--dark);
+     border: var(--lt-blue) 1px solid;
+     border-radius: 10px;
+}
+.top-card {
+     border: solid 1px skyblue;
+     border-radius: 6px;
+     padding: 0.5rem 1rem;
+     margin: 0 1.5rem;
+     color: var(--white);
+}
+.top-card .card-arr {
+     font-size: 2rem;
+     padding-bottom: 0;
+     line-height: 0.5rem;
+}
+.bottom-card {
+     color: var(--lt-blue);
+     font-size: 0.8rem;
+     margin-top: 0.2rem;
+}
 /* -------------------------------------------------- CONTACT -------------------------------------------------- */
 .form-card {
      background-color: var(--white);
-     border: 2px solid var(--lt-blue);
+     border: 2px solid var(--pastel-blue);
      border-radius: 10px;
-     max-width: 60%;
+     max-width: 75%;
+     color: var(--lt-blue);
+     padding: 1.5rem;
+     box-shadow: 0 2px 10px rgba(50,100,255,0.5);
 }
-.form-card label, input, select, textarea {
-     padding-left: 1rem;
+.contact .blurb {
+     max-width: 75%;
 }
-#first {
-
+.first, .last {
+     display: inline-block;
 }
-#last {
-
+h1 {
+     color: #333333;
+     text-align: center;
 }
-#email {
-
+label {
+     display: block;
+     margin-top: 15px;
+     margin-bottom: 5px;
+     font-weight: bold;
+     color: #555555;
 }
-#topic {
-
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #dddddd;
+     border-radius: 4px;
+     box-sizing: border-box;
+     font-size: 14px;
 }
-#question {
-
+select {
+     background-color: #97defb55;
+}
+button {
+     width: 100%;
+     padding: 12px;
+     margin-top: 20px;
+     background-color: skyblue;
+     color: var(--dark);
+     border: none;
+     border-radius: 4px;
+     font-size: 16px;
+     cursor: pointer;
+}
+button:hover {
+     background-color: #a7defb;
 }
 /* -------------------------------------------------- FOOTER -------------------------------------------------- */
 footer {
-     background-color: var(--dark);
-     color: var(--white);
-     padding: 2.5rem 2rem 1rem;
+     color: var(--prime-blue);
+     padding: 2.5rem 0;
 }
 .footer-container {
      display: flex;
      flex-wrap: wrap;
-     justify-content: space-evenly;
+     justify-content: space-between;
      gap: 2rem;
      max-width: 1200px;
      margin: 0 auto;
@@ -441,13 +527,15 @@ footer {
      min-width: 140px;
 }
 .footer-col h4 {
-     color: var(--gold);
+     color: var(--dark);
      margin-bottom: 1rem;
      font-size: 1.2rem;
-     border-bottom: 1px solid var(--pastel-blue);
      padding-bottom: 0.5rem;
+     border-bottom: 1px solid gray; 
 }
 .footer-nav-links {
+     display: flex;
+     gap: 1rem;
      list-style: none;
      padding: 0;
 }
@@ -455,18 +543,21 @@ footer {
      margin-bottom: 0.5rem;
 }
 .footer-nav-links a {
-     color: var(--white);
+     color: var(--prime-blue);
      text-decoration: none;
      transition: color 0.5s;
 }
 .footer-nav-links a:hover {
-     color: var(--gold);
+     color: var(--pastel-green);
 }
-.footer-bottom {
-     text-align: center;
-     margin-top: 2rem;
-     padding-top: 1rem;
-     border-top: 1px solid var(--pastel-blue);
-     font-size: 0.85rem;
-     color: var(--pastel-blue);
+.footer-list {
+     list-style: none;
+     padding: 0;
+}
+.footer-list li {
+     margin-bottom: 0.5rem;
+}
+.footer-list .disclaimer {
+     color: #10236A;
+     font-size: 0.9rem;
 }

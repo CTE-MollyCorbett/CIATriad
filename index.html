@@ -37,7 +37,7 @@
     <section id="triad">
       <p class="section-subtitle">Core Framework</p>
       <h2 class="section-title">The CIA Framework</h2>
-      <p>Data is a valuable asset. The primary goal of cybersecurity is to maintain three critical properties - collectively known as the <b>CIA Triad</b> — for all data, all the time.</p>
+      <p class="blurb">Data is a valuable asset. The primary goal of cybersecurity is to maintain three critical properties - collectively known as the <b>CIA Triad</b> — for all data, all the time.</p>
       <div class="triad-grid">
         <div class="triad-card">
           <h3>Confidentiality</h3>
@@ -78,7 +78,7 @@
     <section id="data">
       <p class="section-subtitle">Protecting Data</p>
       <h2 class="section-title">The Three States of Data</h2>
-      <p>To choose the right security tool, you need to know what state data is currently in. Data exists in one of three states at any given moment.</p>
+      <p class="blurb">To choose the right security tool, you need to know what state data is currently in. Data exists in one of three states at any given moment.</p>
       <div class="data-grid">
         <div class="data-card">
           <h3>Data at Rest</h3>
@@ -110,7 +110,7 @@
     <section id="aaa">
       <p class="section-subtitle">The AAA Security Model</p>
       <h2 class="section-title">Authentication, Access Control &amp; Accounting</h2>
-      <p>The AAA model describes the three tools used in practice to achieve the CIA Triad.</p>
+      <p class="blurb">The AAA model describes the three tools used in practice to achieve the CIA Triad.</p>
       <div class="aaa-grid">
         <div class="aaa-card">
           <h3>A</h3>
@@ -136,7 +136,7 @@
     <section id="passwords">
       <p class="section-subtitle">Password Security</p>
       <h2 class="section-title">Password Attacks &amp; How to Defend Against Them</h2>
-      <p>Passwords are the most common - and most commonly attacked - form of authentication.<br>Understanding the attack types is the first step to building a solid defense.</p>
+      <p class="blurb">Passwords are the most common - and most commonly attacked - form of authentication.<br>Understanding the attack types is the first step to building a solid defense.</p>
       <div class="passwords-grid">
         <div class="passwords-card">
           <h3>Brute Force</h3>
@@ -163,7 +163,7 @@
     <!-------------------------------- HOW LONG TO BRUTE FORCE PASSWORDS -------------------------------->
     <section id="pass-safety">
       <h2 class="section-title">How Long to Brute Force Your Password?</h2>
-      <p>Estimated crack time based on password length and character types used. Red = cracked instantly. Green = extremely safe</p>
+      <p class="blurb">Estimated crack time based on password length and character types used. Red = cracked instantly. Green = extremely safe</p>
       <table class="pass-safety-table">
         <thead>
           <tr>
@@ -266,11 +266,34 @@
     <section id="hashing">
       <p class="section-subtitle">Password Storage</p>
       <h2 class="section-title">Password Hashing &amp; Salting</h2>
-      <p>Passwords should never be stored as plain text. The most common safe storage method is <i>hashing</i> - a one-way mathematical transformation.</p>
+      <p class="blurb">Passwords should never be stored as plain text. The most common safe storage method is <i>hashing</i> - a one-way mathematical transformation.</p>
+      <section class="card-top">
+        <div class="top-card">
+          <p>Pa$$word123</p><p class="card-arr">&rarr;</p>
+        </div>
+        <div class="top-card">
+          <p><b>SHA-256 Algorithm</b></p><p class="card-arr">&rarr;</p>
+        </div>
+        <div class="top-card">
+          <p>e55da5df44555ddfe4de33eefd54365...</p><p class="card-arr">&rarr;</p>
+        </div>
+        <div class="top-card">
+          <p>Hashes MATCH<br><br>ACCESS GRANTED</p>
+        </div>
+        <div class="bottom-card">
+          <p>PLAIN TEXT PASSWORD</p>
+        </div>
+        <div class="bottom-card">
+          <p>HASHING FUNCTION</p>
+        </div>
+        <div class="bottom-card">
+          <p>STORED HASH</p>
+        </div>
+        <div class="bottom-card">
+          <p>LOGIN COMPARISON</p>
+        </div>
+      </section>
       <div class="hashing-grid">
-        <section class="card-top">
-        <p><b>Pa$$word123</p><p>SHA-256 Algorithm</p><p>e55da5df44555ddfe4de33eefd54365...</p><p>Hashes MATCH<br><br>ACCESS GRANTED</p>
-        </section>
         <div class="hashing-card">
           <h3>What is Hashing?</h3>
           <h4>ONE-WAY CONVERSION</h4>
@@ -300,7 +323,7 @@
     <section id="methods">
       <p class="section-subtitle">Beyond Passwords</p>
       <h2 class="section-title">Methods of Authentication</h2>
-      <p>Modern security goes far beyond passwords. Here are the key authentication methods used in real-world systems - and how combining them creates much stronger protection.</p>
+      <p class="blurb">Modern security goes far beyond passwords. Here are the key authentication methods used in real-world systems - and how combining them creates much stronger protection.</p>
       <div class="methods-grid">
         <div class="methods-card">
           <div class="methods-card-header">
@@ -378,18 +401,32 @@
     </section>
     <!-------------------------------- AUTHENTICATION METHODS #2 -------------------------------->
     <section class="methods2">
-      <section class="card-top">
-        <p><b>Pa$$word123</p><p>SHA-256 Algorithm</p><p>e55da5df44555ddfe4de33eefd54365...</p><p>Hashes MATCH<br><br>ACCESS GRANTED</p>
+      <section class="methods-card2">
+        <h2 class="methods-card2-title">Top 3 Ways to Stop Password Attacks</h2>
+        <div class="methods-card2-grid">
+          <div class="methods-card2-card">
+            <h3 class="methods-card2-subtitle">#1 - Use Strong Passwords</h3>
+            <p class="methods-card2-content">Long passwords with mixed characters won't be in a dictionary and take too long to crack. Use 12+ characters of all character types.</p>
+          </div>
+          <div class="methods-card2-card">
+            <h3 class="methods-card2-subtitle">#2 - Enable Account Lockout</h3>
+            <p class="methods-card2-content">Lock accounts after 3-5 failed attempts. This stops all automated brute force, dictionary, and spraying attacks cold.</p>
+          </div>
+          <div class="methods-card2-card">
+            <h3 class="methods-card2-subtitle">#3 - Enable 2FA / MFA</h3>
+            <p class="methods-card2-content">Even if a password is stolen, an attacker still cannot log in without your second factor. Enable it everywhere you can.</p>
+          </div>
+        </div>
       </section>
       <section class="card-footer">
-        <p><b>Useful resources:</b> Check if your hashing</p>
+        <p><b>Useful resources:</b> Check if your credentials have been exposed at <a href="https://haveibeenpwned.com" target="_blank">HaveIBeenPwned.com</a> &bull; Learn more about the NIST Cybersecurity Framework at <a href="https://nist.gov/cyberframework" target="_blank">nist.gov/cyberframework</a></p>
       </section>
     </section>
     <!-------------------------------- CONTACT FORM -------------------------------->
     <section class="contact">
       <p class="section-subtitle">Get in Touch</p>
       <h2 class="section-title">Contact Us</h2>
-      <p>Have a question about cybersecurity concepts covered on this page? Use the form below to send us a message and we'll be happy to help!</p>
+      <p class="blurb">Have a question about cybersecurity concepts covered on this page? Use the form below to send us a message and we'll be happy to help!</p>
       <section class="form-card">
         <form action="mailto:student@sllboces.org" method="POST">
           <label for="first">First Name</label>
@@ -418,45 +455,29 @@
   <footer>
     <div class="footer-container">
       <div class="footer-col">
-        <h4>Molly Corbett</h4>
-        <p style="color:#b0bec5; font-size:0.9rem; line-height:1.7;">
-          Computer &amp; Information Science<br>
-          SLL BOCES &amp; SUNY Canton<br>
-          Canton, New York 13617<br>
-          Class of 2027
-        </p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul class="footer-nav-links">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <h4>CyberSecure Fundamentals</h4>
+        <ul class="footer-list">
+          <li>CIA Triad &amp; Authentication</li>
+          <li>Computer &amp; Information Science - Seaway Tech</li>
+          <br>
+          <li class="disclaimer">Content based on the NIST Cybersecurity Framework</li>
+          <li>NIST Cyber Framework &bull; HaveIBeenPwned</li>
+          <li>Images created by gamma.app &amp; Google Gemini</li>
+          <li class="disclaimer">&copy; 2026 CyberSecure Fundamentals - All Rights Reserved</li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>My Projects</h4>
+        <h4>Quick Links</h4>
         <ul class="footer-nav-links">
-          <li><a href="https://yourusername.github.io/tourism-site">Tourism Site</a></li>
-          <li><a href="https://yourusername.github.io/css-showcase">CSS Showcase</a></li>
-          <li><a href="https://yourusername.github.io/js-calculator"></a></li>
-          <li><a href="https://yourusername.github.io/ethics-page"></a></li>
+          <li><a href="#triad">CIA Triad</a></li>
+          <li><a href="#data">Data States</a></li>
+          <li><a href="#aaa">Auth (AAA)</a></li>
+          <li><a href="#passwords">Passwords</a></li>
+          <li><a href="#hashing">Hashing</a></li>
+          <li><a href="#methods">Auth Methods</a></li>
+          <li><a href="contact">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Links</h4>
-        <ul class="footer-nav-links">
-          <li><a href="https://www.sllboces.org" target="_blank">SLL BOCES</a></li>
-          <li><a href="https://canton.edu" target="_blank">SUNY Canton</a></li>
-          <li><a href="https://cyber.org" target="_blank">Cyber.org</a></li>
-          <li><a href="https://apps.cyber.org" target="_blank">Cyber Range</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Molly Corbett &mdash; SLL BOCES Computer &amp; Information Science &mdash; Canton, NY</p>
     </div>
   </footer>
 </body>
