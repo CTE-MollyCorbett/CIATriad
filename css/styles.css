@@ -124,71 +124,6 @@ header {
     padding: 0 0.5rem;
     width: max-content;
 }
-/* ---------------------------------------------- PARALLAX IMAGES ---------------------------------------------- */
-body, html, main {
-     width: 100%;
-     height: 100%;
-}
-.para1 {
-     background-image: url("../images/digitalVault.png");
-     width: 100%;
-     height: 100%;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     border: ridge var(--gold) 0.5rem;
-}
-.para2 {
-     background-image: url("../images/aaa1.png");
-     width: 100%;
-     height: 100%;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     border: ridge var(--gold) 0.5rem;
-}
-.para3 {
-     background-image: url("../images/attackComic.png");
-     width: 100%;
-     height: 100%;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     border: ridge var(--gold) 0.5rem;
-}
-.para4 {
-     background-image: url("../images/hash1.png");
-     width: 100%;
-     height: 100%;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     border: ridge var(--gold) 0.5rem;
-}
-.para5 {
-     background-image: url("../images/auth1.png");
-     width: 100%;
-     height: 100%;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     border: ridge var(--gold) 0.5rem;
-}
-.para6 {
-     background-image: url("../images/threeGuardians.png");
-     width: 100%;
-     height: 100%;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     border: ridge var(--gold) 0.5rem;
-}
 /* -------------------------------------------------- BUTTONS -------------------------------------------------- */
 .btn {
      display: inline-block;
@@ -628,4 +563,37 @@ footer {
 .footer-list .disclaimer {
      color: #10236A;
      font-size: 0.9rem;
+}
+@media screen and (min-width: 990px) {
+     body, html, main {
+     width: 100%;
+     height: 100%;
+     }
+     .para {
+          width: 100%;
+          height: 100%;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: ridge var(--gold) 0.5rem;
+     }
+     .para1 {
+          background-image: url("../images/digitalVault.png");
+     }
+     .para2 {
+          background-image: url("../images/aaa1.png");
+     }
+     .para3 {
+          background-image: url("../images/attackComic.png");
+     }
+     .para4 {
+          background-image: url("../images/hash1.png");
+     }
+     .para5 {
+          background-image: url("../images/auth1.png");
+     }
+     .para6 {
+          background-image: url("../images/threeGuardians.png");
+     }
 }
