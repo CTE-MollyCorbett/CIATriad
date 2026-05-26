@@ -188,9 +188,17 @@ section {
      border: var(--lt-blue) solid 1px;
      border-radius: 6px;
      margin-top: 1rem;
-     padding: 1rem 2rem;
-     padding-bottom: 0.5rem;
-     border-bottom: solid 1px var(--lt-blue);
+     padding: 1rem 1.5rem;
+     padding-bottom: 0rem;
+     display: flex;
+     justify-content: space-between;
+}
+.cftext {
+     text-align: left;
+}
+.cfemoji {
+     font-size: 2rem;
+     padding-right: 0.5rem;
 }
 .blurb {
      color: steelblue;
@@ -215,8 +223,10 @@ section {
 .triad-card h3 {
      color: var(--prime-blue);
      margin-bottom: 0.75rem;
+     font-size: 2rem;
+     padding-top: 0;
 }
-.triad-card p {
+.triad-p {
      padding-left: 1.2rem;
 }
 .highlight {
@@ -225,6 +235,10 @@ section {
      padding: 0.5rem;
      padding-left: 1rem;
      color: brown;
+}
+.triad-emoji {
+     padding: 0;
+     font-size: 3rem;
 }
 /* ------------------------------------------------ DATA STATES ------------------------------------------------ */
 .data-grid {
@@ -245,6 +259,7 @@ section {
 .data-card h3 {
      color: var(--prime-blue);
      margin-bottom: 0.75rem;
+     font-size: 2rem;
 }
 .data-card p {
      padding-left: 1.2rem;
@@ -252,6 +267,10 @@ section {
 .data-card li {
      margin-bottom: 0.4rem;
      font-size: 0.95rem;
+}
+.example {
+     color: steelblue;
+     font-style: italic;
 }
 /* -------------------------------------------- AUTHENTICATION (AAA) -------------------------------------------- */
 .aaa-grid {
@@ -309,6 +328,9 @@ section {
 .passwords-card p {
      color: #666;
 }
+.pass-emoji {
+     font-size: 3rem;
+}
 /* ---------------------------------------------- PASSWORD SAFETY ---------------------------------------------- */
 .pass-safety-table {
      background-color: var(--white);
@@ -355,23 +377,29 @@ section {
      margin-top: 1.5rem;
 }
 .methods-card {
-     flex: 1 1 260px;
-     border: 2px double var(--prime-blue);
+     flex: 1 1 220px;
+     background-color: var(--white);
+     border: 1px solid var(--lt-blue);
      border-radius: 6px;
-     overflow: hidden; /* Will also fix the hero image cover */
-     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+     padding: 1rem;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+     color: var(--text);
 }
-.methods-card-header {
-     background-color: var(--prime-blue);
-     padding: 1rem 1.2rem;
-     color: var(--gold);
+.methods-card h3 {
+     color: black;
+     font-size: 1.5rem;
+     font-weight: bold;
 }
-.methods-card-body {
-     padding: 1rem 1.2rem;
-}
-.methods-card-body p {
+.methods-card h4 {
+     color: var(--prime-blue);
+     font-size: 1rem;
      margin-bottom: 1rem;
-     font-size: 0.95rem;
+}
+.methods-card p {
+     color: #666;
+}
+.auth-emoji {
+     font-size: 2rem;
 }
 /* ------------------------------------------ AUTHENTICATION METHODS 2 ------------------------------------------ */
 .methods-card2 {
@@ -416,6 +444,9 @@ section {
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
      color: var(--text);
 }
+.hash-emoji {
+     font-size: 3rem;
+}
 .hashing-card h3 {
      color: black;
      font-size: 1.5rem;
@@ -447,6 +478,7 @@ section {
      padding: 0.5rem 1rem;
      margin: 0 1.5rem;
      color: var(--white);
+
 }
 .top-card .card-arr {
      font-size: 2rem;
